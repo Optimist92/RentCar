@@ -17,7 +17,7 @@ public abstract class BaseModelAction implements Action{
 		this.priceService = priceService;
 	}
 
-	protected ModelService getModelService() {
+	public ModelService getModelService() {
 		return modelService;
 	}
 	
