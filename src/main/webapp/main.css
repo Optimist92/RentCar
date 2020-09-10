@@ -1,0 +1,339 @@
+@charset "UTF-8";
+
+/*font-family: 'Amatic SC', cursive;
+font-family: 'Balsamiq Sans', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Marck Script', cursive;
+font-family: 'Neucha', cursive;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Yanone Kaffeesatz', sans-serif;*/
+
+
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+    color:black;
+}
+
+header {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+	
+}
+.header-left {
+	display: flex;
+}
+.header-up {
+	display:flex;
+	justify-content: space-between;
+	background-color: white;
+}
+
+.header-center {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+}
+.logo {
+	margin-top: 10px;
+}
+.login_button {
+	color: #fff;
+	text-decoration: none;
+	user-select: none;
+	background: white;
+	border: 2px solid #000;
+	border-radius: 15px;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-right:5px;
+	margin-left: 50%;
+	font-family:'Yanone Kaffeesatz', sans-serif;;
+	font-weight: bold;
+	font-size: x-large;
+	text-align: center;
+}
+
+.login_button a:hover {
+	text-decoration: none;
+}
+
+.login_button:hover { background:#e8f801; } /* при наведении курсора мышки */
+
+/*.login_button:active { background: rgb(152,15,0); } /* при нажатии */
+
+
+.mob_info {
+	display: block;
+}
+
+.address, .clock, .mob_number {
+	display: flex;
+	align-items: center;
+	flex-basis: 30%;
+	font-family:'Caveat', cursive;
+	font-weight: bold;
+	color: #f20f5a;
+}
+
+.address_img, .clock_img, .mob_img {
+	margin-right: 10px;
+}
+
+.address a, .mob_number a{
+	text-decoration: none;
+    color:#f20f5a;
+}
+
+a:hover {
+	text-decoration: underline;
+
+    color:black;
+}
+.header-down a {
+	color:white;
+}
+
+
+.list {
+	text-align: center;
+	margin: 0;
+	display: flex;
+	padding-left: 4em;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+}
+.list li{
+	list-style:none;
+	width: 12%;
+	line-height: 60px;
+}
+
+.list li:hover {
+	background-color:#e8f801;
+	border-radius: 2px;
+}
+
+.list a {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	display:block;
+}
+.list a:hover {
+	text-decoration: none;
+	color:black;
+	display:block;
+}
+
+.header-down {
+	background: #1d1f1d;
+	
+}
+.search {
+    border: 2px solid #000;
+    min-height: 20px;
+    display: flex;
+
+   }
+input[type="search"] {
+    outline: none;
+    -webkit-appearance: none;
+    vertical-align: middle;
+
+}
+input[type="submit"] {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url(images/searching.png) no-repeat 50% 50%;
+}
+
+.wrapper {
+	margin-top: 126px;
+}
+
+.items {
+	display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    align-content: space-around;
+    background-color: white;
+    justify-content: space-around;
+    
+}
+
+.item {
+	display: flex;
+	border: 2px dotted #bdbdbd;
+	border-radius: 30px;
+	background-color: #ffffff;
+	height: 215px;
+	width: 30%;
+	align-items: center;
+	justify-content: center;
+}
+.item-img {
+	width: 30%;
+}
+.desc {
+	width: 50%;
+}
+
+.desc p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 100%;
+}
+
+.heading p{
+	font-family: 'Neucha', cursive;
+	font-weight: bold;
+	font-size: 130%;
+}
+
+.titles {
+	position: relative;
+	overflow: hidden;
+	/*max-width: 600px;*/
+	margin-left: auto;
+	margin-right: auto;
+	top:129px;
+}
+
+.tables {
+	margin-top: 140px;
+}
+
+    /* стили основного контейнера слайдера */
+    .slider {
+      position: relative;
+      overflow: hidden;
+      /*max-width: 600px;*/
+      margin-left: auto;
+      margin-right: auto;
+      top:129px;
+    }
+
+    /* стили для обёртки, в которой заключены слайды */
+    .slider__wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* стили для контейнера слайдов */
+    .slider__items {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    /* стили для слайдов */
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    /* стили для кнопок "вперед" и "назад" */
+    .slider__control {
+      position: absolute;
+      top: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      color: #fff;
+      text-align: center;
+      opacity: 0.5;
+      height: 50px;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .slider__control_show {
+      display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: 0.9;
+    }
+
+    .slider__control_prev {
+      left: 0;
+    }
+
+    .slider__control_next {
+      right: 0;
+    }
+
+    .slider__control::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .slider__control_prev::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slider__control_next::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    /* стили для индикаторов */
+    .slider__indicators {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      left: 0;
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      margin-right: 15%;
+      margin-left: 15%;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .slider__indicators li {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 30px;
+      height: 4px;
+      margin-right: 3px;
+      margin-left: 3px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.5);
+      background-clip: padding-box;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+
+    .slider__indicators li.active {
+      background-color: #fff;
+    }
+
+    .img-fluid {
+      display: inline-block;
+      height: auto;
+      max-width: 100%;
+    }
