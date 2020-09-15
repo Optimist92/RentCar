@@ -7,7 +7,9 @@ import org.gocar.domain.Car;
 public interface CarService {
 	List<Car> findAll() throws LogicException;
 
+	Car findById (Long id) throws LogicException;
+
 	void save(Car car) throws LogicException;
 
-	void delete(Long id) throws LogicException;
+	void delete(List<Long> ids) throws LogicException;
 }

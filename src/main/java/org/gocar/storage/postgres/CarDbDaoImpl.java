@@ -61,8 +61,8 @@ public class CarDbDaoImpl implements CarDao{
 				car.setModel(new Model());
 				car.getModel().setId(r.getLong("model_id"));
 				car.setRegNumberAuto(r.getString("reg_number_auto"));
-				car.setYearOfIssue(r.getInt("year_of_issue"));
 				car.setRented(r.getInt("rented"));
+				car.setYearOfIssue(r.getInt("year_of_issue"));
 				car.setColor(r.getString("color"));
 				car.setOnRepair(r.getInt("on_repair"));
 			}

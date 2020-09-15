@@ -43,6 +43,7 @@ import org.gocar.web.action.Action;
 import org.gocar.web.action.LoginAction;
 import org.gocar.web.action.LogoutAction;
 import org.gocar.web.action.MainAction;
+import org.gocar.web.action.car.CarListAction;
 import org.gocar.web.action.model.ModelEditAction;
 import org.gocar.web.action.model.ModelListAction;
 import org.gocar.web.action.model.ModelSaveAction;
@@ -61,6 +62,7 @@ public class Factory implements AutoCloseable {
 		actions.put("/models/edit", () -> getModelEditAction());
 		actions.put("/models/save", () -> getModelSaveAction());
 		actions.put("/models/delete", () -> getModelDeleteAction());
+		actions.put("/cars/list", () -> getCarListAction());
 	}
 
 	public Action getAction(String url) throws LogicException {
@@ -143,6 +145,16 @@ public class Factory implements AutoCloseable {
 			modelDeleteActionImpl.setModelService(getModelService());
 		}
 		return modelDeleteAction;
+	}
+
+	private Action carListAction = null;
+	public Action getCarListAction() throws LogicException {
+		if(carListAction == null) {
+			CarListAction carListActionImpl = new CarListAction();
+			carListAction = carListActionImpl;
+			carListActionImpl.setCarService(getCarService());
+		}
+		return carListAction;
 	}
 	
 	private CarClassService carClassService = null;

@@ -32,6 +32,7 @@ public class SequrityFilter implements Filter {
 		managerURLs.add("/models/edit.html");
 		managerURLs.add("/models/save.html");
 		managerURLs.add("/models/delete.html");
+		managerURLs.add("/cars/list.html");
 		accessURLs.put(Role.MANAGER, managerURLs);
 		Set<String> couriesURLs = new HashSet<>();
 		accessURLs.put(Role.OPERATOR, couriesURLs);
